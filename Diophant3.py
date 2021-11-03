@@ -7,23 +7,6 @@
 import tkinter as tk
 import random
 import time
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-def c(x,y): #канторовская нумерация пар натуральных чисел
-    return int(((x+y)*(x+y)+3*x+y)/2)
-def pi(n,kor): #канторовская нумерация n-элементных кортежей натуральных чисел
-    if(n==len(kor)):
-        if(n>2):
-            kor1=[];
-            kor1.append(c(kor[0],kor[1]))
-            for i in range(2,n):
-                kor1.append(kor[i])
-            return pi(n-1,kor1)
-        else:
-            return c(kor[0],kor[1])
-    else:
-        return None
 def to_set(list):
     mn=[];
     for i in range(len(list)):
@@ -718,8 +701,5 @@ if __name__ == '__main__':
     for ё in range(2):
         ONCLICK()"""
     window.mainloop()
-    # В уравнении x^2+y^2=z*(x+y) куда-то девает последнюю операцию вычитания (ошибка в переводе в ОПЗ)!!!
-    # Для вышеуказанного уравнения получается I0 N0 O4 I1 N0 O4 O0 I2 I0 I1 O0 O2
-    #print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
